@@ -6,8 +6,8 @@
 
     <title>About</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -28,72 +28,83 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Navigation */
-
-        nav {
-            min-height: 80px;
-            width: 100%;
+        /* Header */
+nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 6%;
+            padding: 20px;
             background-color: rgb(23, 23, 93);
-            gap: 25px;
         }
 
         .name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            white-space: nowrap;
+            font-weight: bold;
+            color: white;
+            padding: 20px;
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+            background-color: rgb(23, 23, 93);
+        }
         nav ul {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 25px;
             list-style: none;
-            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: row;
         }
-
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
         }
-
         nav ul li a:hover {
-            color: rgb(150, 120, 190);
+            color: rgb(91, 91, 189);
         }
 
-        /* About Section */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+        /* Main Section */
 
         main {
             width: 100%;
             display: flex;
             justify-content: center;
+
             padding: 60px 20px;
         }
 
         .about-box {
             width: min(900px, 100%);
-            padding: clamp(25px, 4vw, 50px);
+
+            padding: clamp(25px, 4vw, 45px);
+
             border: 2px solid rgb(131, 105, 155);
             border-radius: 18px;
-            background-color: rgba(13, 13, 45, 0.65);
+
+            background-color: rgba(0, 0, 33, 0.55);
+
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .about-box p {
             margin-bottom: 18px;
-            font-size: clamp(0.95rem, 1.4vw, 1.05rem);
-            line-height: 1.8;
-        }
 
-        .about-box p:last-child {
-            margin-bottom: 0;
+            font-size: clamp(0.92rem, 1.4vw, 1rem);
+            line-height: 1.8;
         }
 
         .purple {
@@ -108,29 +119,35 @@
 
         .about-box ul li {
             margin-bottom: 7px;
-            font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+
+            font-size: clamp(0.92rem, 1.4vw, 1rem);
             line-height: 1.6;
         }
 
         .about-box strong {
             display: block;
-            margin-top: 10px;
             margin-bottom: 8px;
-            font-size: 1.05rem;
+
+            font-size: 1rem;
         }
 
         /* Tablet */
 
         @media (max-width: 768px) {
+
             nav {
                 flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                padding: 18px 20px;
+                gap: 10px;
+
+                padding: 18px 15px;
             }
 
             nav ul {
-                gap: 15px 22px;
+                gap: 12px 20px;
+            }
+
+            nav ul li a {
+                font-size: 0.95rem;
             }
 
             main {
@@ -139,16 +156,17 @@
 
             .about-box {
                 width: 100%;
-                padding: 28px 22px;
+                padding: 30px 24px;
             }
         }
 
         /* Mobile */
 
         @media (max-width: 480px) {
+
             nav {
-                min-height: auto;
-                padding: 18px 12px;
+                padding: 16px 10px;
+                gap: 8px;
             }
 
             .name {
@@ -156,11 +174,11 @@
             }
 
             nav ul {
-                gap: 10px 16px;
+                gap: 8px 15px;
             }
 
             nav ul li a {
-                font-size: 0.9rem;
+                font-size: 0.88rem;
             }
 
             main {
@@ -173,30 +191,42 @@
             }
 
             .about-box p {
+                margin-bottom: 15px;
                 line-height: 1.7;
-                margin-bottom: 16px;
             }
 
             .about-box ul {
                 margin-left: 18px;
                 padding-left: 8px;
             }
+
+            .about-box ul li {
+                margin-bottom: 6px;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <header>
+
         <nav>
-            <h3 class="name">Fatima naz</h3>
+
+            <h3 class="name">Fatima Naz</h3>
+
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/project.html">Projects</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+
         </nav>
+
     </header>
+
+
     <main>
 
         <div class="about-box">
@@ -246,9 +276,10 @@
                 To further enhance my expertise, I joined
                 <span class="purple">GIAIC (Governor Sindh's IT Initiative)</span>,
                 where I am completing structured training in advanced technologies,
-                including <span class="purple">
-                TypeScript, Node.js, React.js, Next.js, Python, AgentSDK,
-                Spec-Driven Development, and Associate Foundations in AI.
+                including
+                <span class="purple">
+                    TypeScript, Node.js, React.js, Next.js, Python, AgentSDK,
+                    Spec-Driven Development, and Associate Foundations in AI.
                 </span>
             </p>
 
