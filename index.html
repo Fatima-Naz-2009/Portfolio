@@ -3,290 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Fatima Naz Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            min-height: 100vh;
-            background-color: rgb(0, 0, 33);
+            background-color: rgb(0,0,33);
             color: white;
             font-family: 'Poppins', sans-serif;
         }
-
-        /* Header */
-
         nav {
-            min-height: 80px;
-            width: 100%;
-            padding: 15px 20px;
-
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 28px;
-
+            height: 80px;
+            padding: 0 20px;
             background-color: rgb(23, 23, 93);
         }
-
-        .name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            white-space: nowrap;
-        }
-
         nav ul {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-
             list-style: none;
-            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: row;
         }
-
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 1rem;
-            font-weight: 500;
-
-            transition: color 0.3s ease;
         }
-
         nav ul li a:hover {
             color: rgb(91, 91, 189);
         }
-
-        /* Main Section */
-
-        main {
-            width: 100%;
+        .firstSection {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-
-            padding: 60px 20px;
+            align-items: center;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
         }
-
-        .about-box {
-            width: min(900px, 100%);
-
-            padding: clamp(25px, 4vw, 45px);
-
-            border: 2px solid rgb(131, 105, 155);
-            border-radius: 18px;
-
-            background-color: rgba(0, 0, 33, 0.55);
-
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        .firstSection > div {
+            flex: 1;
+            min-width: 300px;
         }
-
-        .about-box p {
-            margin-bottom: 18px;
-
-            font-size: clamp(0.92rem, 1.4vw, 1rem);
-            line-height: 1.8;
+        .leftdiv {
+            font-size: 2.5rem;
         }
-
-        .purple {
+        .rightdiv img {
+            width: 100%;
+            max-width: 300px;
+        }
+        .secondsection {
+            max-width: 90vw;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .thirdsection{
+            max-width: 90vw;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;        
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            text-align: left;
+        }
+        p {
+            margin: 12px 0;
+        }
+        .purple{
             color: blueviolet;
-            font-weight: 600;
         }
-
-        .about-box ul {
-            margin: 5px 0 22px 25px;
-            padding-left: 10px;
+        #element{
+            color: blueviolet;
         }
-
-        .about-box ul li {
-            margin-bottom: 7px;
-
-            font-size: clamp(0.92rem, 1.4vw, 1rem);
-            line-height: 1.6;
-        }
-
-        .about-box strong {
-            display: block;
-            margin-bottom: 8px;
-
-            font-size: 1rem;
-        }
-
-        /* Tablet */
-
         @media (max-width: 768px) {
-
             nav {
                 flex-direction: column;
-                gap: 10px;
-
-                padding: 18px 15px;
+                height: auto;
+                padding: 10px 0;
+                text-align: center;
             }
-
             nav ul {
-                gap: 12px 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+            .leftdiv {
+                font-size: 2rem;
+            }
+            .rightdiv img {
+                max-width: 250px;
             }
 
-            nav ul li a {
-                font-size: 0.95rem;
-            }
-
-            main {
-                padding: 40px 15px;
-            }
-
-            .about-box {
-                width: 100%;
-                padding: 30px 24px;
-            }
         }
-
-        /* Mobile */
-
-        @media (max-width: 480px) {
-
-            nav {
-                padding: 16px 10px;
-                gap: 8px;
-            }
-
-            .name {
-                font-size: 1.3rem;
-            }
-
-            nav ul {
-                gap: 8px 15px;
-            }
-
-            nav ul li a {
-                font-size: 0.88rem;
-            }
-
-            main {
-                padding: 25px 10px;
-            }
-
-            .about-box {
-                padding: 22px 17px;
-                border-radius: 14px;
-            }
-
-            .about-box p {
-                margin-bottom: 15px;
-                line-height: 1.7;
-            }
-
-            .about-box ul {
-                margin-left: 18px;
-                padding-left: 8px;
-            }
-
-            .about-box ul li {
-                margin-bottom: 6px;
-            }
-        }
+        
     </style>
 </head>
-
 <body>
-
     <header>
-
         <nav>
-
-            <h3 class="name">Fatima Naz</h3>
-
+            <h3 class="name">Fatima naz</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/project.html">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
-
-
     <main>
-
-        <div class="about-box">
-
-            <p>
-                My name is <span class="purple">Fatima Naz</span>, and I was born on
-                <span class="purple">June 22, 2009</span>, in Karachi.
-            </p>
-
-            <p>
-                I am a <span class="purple">passionate and driven IT enthusiast</span>,
-                eager to gain hands-on experience in the tech industry. As a fresher,
-                I am actively seeking opportunities to apply my skills and expand my knowledge.
-            </p>
-
-            <p>
-                My journey in programming began in <span class="purple">2023</span>
-                when I delved into theoretical concepts. In
-                <span class="purple">2024</span>, I transitioned to practical learning,
-                mastering various programming languages and frameworks.
-            </p>
-
-            <p>
-                In just one year, I have developed a strong skill set, including:
-            </p>
-
+        <section class="firstSection">
+            <div class="leftdiv">Hi! It's me <span class="purple">Fatima Naz.</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightdiv">
+                <img src="dp.png" alt="profilepic">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <h1>Introduction</h1>
+            <p>Hye! and greetings I’m Fatima Naz, a passionate and ambitious IT enthusiast from Karachi, Pakistan, eager to gain hands-on experience through internships in tech companies. Currently, I have completed my matriculation and currently completing intermediate studies. While securing an internship at the age of 17, without an official certification or degree, may seem challenging, I believe it is far from impossible.</p>
+    
+            <p>Instead of relying solely on credentials, I let my work speak for itself. The very structure and design of my portfolio serve as proof of my skills, and my projects reflect my ability to turn knowledge into real-world applications.</p>
+                        
+            <p>My journey in programming began in 2023, despite initially having no interest in computer science—I actually chose biology as my major in matriculation. However, curiosity led me to explore programming through self-learning, starting with HTML, CSS, and JavaScript via online tutorials. Determined to deepen my expertise, I joined GIAIC (Governor Sindh’s IT Initiative), where I completed:</p>
+                        
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Node.js</li>
-                <li>Next.js</li>
-                <li>React.js</li>
-                <li>Python</li>
+                <li><b>Quarter 1:</b> TypeScript</li>
+                <li><b>Quarter 2:</b> Next.js & React.js</li>
+                <li><b>Quarter 3:</b> Python and its libraries (Streamlit, Pandas, etc.)</li>
+                <li><b>Quarter 4:</b> AgentSDK and Spec driven developement</li>
+                <li><b>Quarter 5(Ongoing):</b> Associate Foundations in AI, FDE(forward deployed enginner), Openclaw</li>
             </ul>
-
+    
+            <p>Though I may not be certified yet, I am on track to complete all six quarters, which will eventually lead to a Claude certification, InshaAllah.</p>
+                
+            <p>I am eager to apply my knowledge, creativity, and problem-solving skills in a professional setting. I strongly believe that passion, persistence, and real-world experience define a true developer—not just degrees. I am ready to embrace new challenges, contribute to innovative projects, and learn from industry experts.</p>
+    
+            <p><b>Let’s connect and build the future together! 🚀</b></p>
+        </section>
+        <hr>
+        <section class="thirdsection">
+        
+            <h1>Why Hire Me Without a Certificate?</h1>
             <p>
-                <strong>Learning Resources:</strong>
-
-                I acquired foundational web development skills—
-                <span class="purple">HTML, CSS, and JavaScript</span>—
-                through <span class="purple">self-study</span>.
+    I may be 17 and without formal certification — but I’m not without skills, sincerity, or substance.
+    I’ve built real-world projects, faced rejections, learned programming from scratch, and continue growing.
+    What I bring isn’t just code — I bring vision, consistency, creativity, and hunger to prove myself.
+    Give me one chance, and I’ll give you 10x results. Let my work speak.
             </p>
-
-            <p>
-                To further enhance my expertise, I joined
-                <span class="purple">GIAIC (Governor Sindh's IT Initiative)</span>,
-                where I am completing structured training in advanced technologies,
-                including
-                <span class="purple">
-                    TypeScript, Node.js, React.js, Next.js, Python, AgentSDK,
-                    Spec-Driven Development, and Associate Foundations in AI.
-                </span>
-            </p>
-
-            <p>
-                As I continue to grow in the tech field, I am actively seeking
-                opportunities to contribute, collaborate, and gain real-world
-                experience in software development and problem-solving.
-            </p>
-
-        </div>
-
+</section>
     </main>
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Figma developer', 'Full-stack developer', 'Frontend developer'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
 </html>
